@@ -1,5 +1,5 @@
 <p>
-  <img src="" style="wight=100%" />
+  <img src="preview.png" style="wight=100%" />
 </p>
 
 # 🎵 MusicBox – Nền tảng nghe nhạc hiện đại

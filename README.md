@@ -1,8 +1,8 @@
 
 
-# 🎵 MusicBox – Nền tảng nghe nhạc hiện đại
+# 🎵 MusicBox8 – Nền tảng nghe nhạc hiện đại
 
-**MusicBox** là một nền tảng web nghe nhạc full-stack được xây dựng bằng **React**, **ASP.NET Core**, và **MongoDB**. Dự án hỗ trợ người dùng nghe nhạc, quản lý bài hát cá nhân, và thanh toán nâng cấp tài khoản thông qua **VNPAY**.
+**MusicBox8** là một nền tảng web nghe nhạc full-stack được xây dựng bằng **Dart**, **ASP.NET Core**, và **MongoDB**. Dự án hỗ trợ người dùng nghe nhạc, quản lý bài hát cá nhân, và thanh toán nâng cấp tài khoản thông qua **VNPAY**.
 
 ---
 
@@ -22,7 +22,7 @@
 
 | Thành phần     | Công nghệ                         |
 |----------------|----------------------------------|
-| Frontend       | React, React-Bootstrap, React Router DOM |
+| Frontend       | Dart                             |
 | Backend        | ASP.NET Core Web API (.NET 8+)   |
 | Database       | MongoDB                          |
 | Authentication | JWT                              |

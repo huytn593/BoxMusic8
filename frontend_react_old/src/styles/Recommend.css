@@ -1,0 +1,141 @@
+.recommend-page {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.recommend-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.recommend-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    border-bottom: 1px solid #282828;
+    padding-bottom: 1rem;
+}
+
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.music-card {
+    background-color: #181818;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.music-card:hover {
+    background-color: #282828;
+    transform: translateY(-5px);
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vip-badge-recommend {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ffc107;
+    color: black;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    border: 1px solid white;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.music-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay .play-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.card-overlay .play-button:hover {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin: 0.25rem 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recommend-page {
+        padding: 1rem;
+    }
+    .recommend-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .recommend-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+} 

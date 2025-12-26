@@ -1,0 +1,282 @@
+/* General Page Setup */
+.history-page {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.history-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #1DB954; /* Spotify Green */
+}
+
+/* Header */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid #282828;
+    margin-bottom: 2rem;
+}
+
+.history-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.history-clock-icon {
+    opacity: 0.8;
+}
+
+.delete-all-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-all-btn:hover {
+    transform: scale(1.05);
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/* Grid Layout */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Music Card */
+.history-music-card {
+    background-color: #181818;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.history-music-card:hover {
+    background-color: #282828;
+    transform: translateY(-5px);
+}
+
+.history-card-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.history-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.vip-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.history-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.history-music-card:hover .history-card-overlay {
+    opacity: 1;
+}
+
+.history-card-overlay .play-button,
+.history-card-overlay .icon-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.history-card-overlay .play-button:hover,
+.history-card-overlay .icon-button:hover {
+    transform: scale(1.15);
+    color: #1DB954;
+}
+
+.history-card-overlay .icon-button:hover {
+    color: #ff4d4d; /* Red for delete */
+}
+
+.history-card-overlay .icon-button[title="Thông tin"]:hover {
+     color: #17a2b8; /* Blue for info */
+}
+
+
+.history-card-info {
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.history-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.history-card-artist {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.history-card-subtitle {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* Empty State */
+.history-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background-color: #181818;
+    border-radius: 12px;
+    margin-top: 2rem;
+    color: #b3b3b3;
+}
+
+.empty-history-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.history-empty-state h3 {
+    margin-top: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Modal Customization */
+.modal-content {
+    background-color: #282828;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+}
+.modal-header {
+    border-bottom: 1px solid #404040;
+}
+.modal-footer {
+     border-top: 1px solid #404040;
+}
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .history-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .history-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .history-title {
+        font-size: 2rem;
+    }
+    .delete-all-btn {
+        width: 100%;
+    }
+     .history-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+     .history-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .history-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+     .history-card-info {
+        padding: 0.75rem;
+    }
+    .history-card-title {
+        font-size: 1rem;
+    }
+    .history-card-subtitle {
+        font-size: 0.8rem;
+    }
+}

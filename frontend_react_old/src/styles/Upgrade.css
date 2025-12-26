@@ -1,0 +1,30 @@
+.upgrade-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+}
+
+.upgrade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.14);
+}
+
+.hover-glow {
+    transition: all 0.2s ease-in-out;
+}
+
+.hover-glow:hover {
+    color: #facc15;
+    transform: translateX(4px);
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.15);
+    border-color: #facc15 !important;
+}
+
+

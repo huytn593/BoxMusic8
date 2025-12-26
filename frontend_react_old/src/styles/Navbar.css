@@ -1,0 +1,43 @@
+/* Nền đen mờ cho backdrop của modal */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.7); /* Màu đen mờ cho backdrop */
+}
+
+/* Tùy chỉnh background của modal */
+.custom-modal-overlay .modal-content {
+    background-color: #343a40; /* Nền modal màu xám tối (hoặc bất kỳ màu nào bạn muốn) */
+    color: #fff; /* Chữ màu trắng để dễ đọc */
+    border-radius: 10px; /* Bo góc modal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Thêm hiệu ứng shadow */
+}
+
+.custom-dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.6) !important; /* Nền đen bán trong suốt */
+    backdrop-filter: blur(10px) !important; /* Hiệu ứng mờ */
+    border-radius: 8px !important; /* Tùy chỉnh góc bo cho menu */
+    box-shadow: none !important; /* Tắt bóng đổ nếu có */
+}
+
+.custom-dropdown-menu .dropdown-item {
+    color: white !important; /* ✅ chữ các mục trắng */
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* ✅ hover nhẹ */
+    color: #ff4d4f !important; /* ✅ màu đỏ khi hover (hoặc để trắng nếu muốn đơn giản) */
+}
+
+.navbar .nav-link {
+    transition: color 0.3s ease;
+}
+
+/* Hover sẽ nổi đỏ */
+.navbar .nav-link:hover {
+    color: #dc3545 !important; /* Bootstrap màu đỏ danger */
+}
+
+/* Nếu đã active thì giữ nguyên màu đỏ, không thay đổi */
+.navbar .nav-link.active {
+    color: #dc3545 !important;
+    font-weight: 600;
+}

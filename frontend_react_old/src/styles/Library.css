@@ -1,0 +1,312 @@
+/* General Page Setup */
+.library-page {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.library-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid #282828;
+    margin-bottom: 2rem;
+}
+
+.library-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.library-limits {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    color: #b3b3b3;
+}
+
+.user-role-badge {
+    font-size: 0.9rem;
+}
+
+.create-playlist-btn {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.create-playlist-btn:hover, .create-playlist-btn:focus {
+    transform: scale(1.05);
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+/* Library Grid */
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Playlist Card */
+.playlist-card {
+    background-color: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.playlist-card-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    cursor: pointer;
+}
+
+.playlist-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.playlist-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.playlist-card-overlay .icon-button {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.playlist-card-overlay .icon-button:hover {
+    transform: scale(1.1);
+    background: #1DB954;
+    border-color: #1DB954;
+}
+
+.playlist-card-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.playlist-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+}
+
+.playlist-card-track-count {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    flex-grow: 1;
+}
+
+.playlist-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.playlist-card-actions .action-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Empty State */
+.library-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background-color: #181818;
+    border-radius: 12px;
+    margin-top: 2rem;
+    color: #b3b3b3;
+}
+
+.empty-library-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.library-empty-state h3 {
+    margin-top: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Modal Styling */
+.custom-modal .modal-content {
+    background-color: #282828;
+    color: #ffffff;
+    border: 1px solid #404040;
+    border-radius: 12px;
+}
+.custom-modal .modal-header {
+    border-bottom: 1px solid #404040;
+}
+.custom-modal .modal-footer {
+     border-top: 1px solid #404040;
+}
+.custom-modal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+.custom-modal .form-control {
+    background-color: #333;
+    border-color: #555;
+    color: white;
+}
+.custom-modal .form-control:focus {
+    background-color: #333;
+    border-color: #1DB954;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(29, 185, 84, 0.25);
+}
+.custom-modal .form-text {
+    color: #b3b3b3 !important;
+}
+
+/* Create Playlist Modal Specifics */
+.playlist-cover-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px dashed #555;
+}
+
+/* Add Track Modal Specifics */
+.search-results-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px; /* For scrollbar */
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+.search-result-item:hover {
+    background-color: #333;
+}
+
+.search-result-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.search-result-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+.search-result-title {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.search-result-artist {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .library-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .create-playlist-btn {
+        width: 100%;
+    }
+    .library-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .library-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .library-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+    .playlist-card-title {
+        font-size: 1rem;
+    }
+} 

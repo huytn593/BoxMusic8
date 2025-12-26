@@ -1,0 +1,29 @@
+.upload-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1c1c1c !important;
+}
+
+.upload-preview-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+.genre-badge svg {
+    margin-left: 5px;
+}
+
+.custom-file-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.genre-badge {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    border-radius: 1rem;
+}

@@ -1,0 +1,344 @@
+/* Tổng thể */
+.admin-dark-bg {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-size: 16px; /* Base tăng nhẹ từ 14px */
+    min-height: 100vh;
+}
+
+.track-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+.admin-track-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 1px;
+}
+
+/* Tiêu đề nhạc */
+.track-card .card-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.dark-input {
+    background-color: #1f1f1f;
+    color: #f8f9fa;
+    border: 1px solid #444;
+}
+.dark-input::placeholder {
+    color: #aaa;
+}
+
+.info-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #2c2c2c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border: none;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.info-button:hover {
+    background-color: #dc3545;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.8);
+    transform: scale(1.05);
+}
+
+.admin-stats {
+    display: flex;
+    gap: 24px; /* khoảng cách giữa các mục */
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+
+/* Admin Track Management Page */
+.admin-track-management {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 2rem 3rem;
+}
+
+.admin-track-management .admin-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Header & Filters */
+.admin-track-management .admin-header {
+    margin-bottom: 1.5rem;
+}
+
+.admin-track-management .admin-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.admin-track-management .admin-filters {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.admin-track-management .filter-select, .admin-track-management .filter-input {
+    background-color: #282828;
+    border: 1px solid #404040;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+}
+
+.admin-track-management .filter-select:focus, .admin-track-management .filter-input:focus {
+    background-color: #282828;
+    border-color: #1DB954;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.admin-track-management .filter-input {
+    flex-grow: 1;
+}
+
+/* Track List Header */
+.admin-track-management .admin-track-list-header {
+    display: grid;
+    grid-template-columns: 86px 385px 1.9fr 1.9fr 1fr 2fr;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    color: #b3b3b3;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+/* Track List Body */
+.admin-track-management .admin-track-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-track-management .admin-track-item {
+    display: grid;
+    grid-template-columns: 80px 3fr 2fr 2fr 1fr 2fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.admin-track-management .admin-track-item:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.admin-track-management .admin-track-item:hover .play-btn-overlay {
+    opacity: 1;
+}
+
+/* Columns */
+.admin-track-management .track-cover-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.admin-track-management .track-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.admin-track-management .play-btn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.admin-track-management .track-info-main {
+    min-width: 0;
+}
+
+.admin-track-management .track-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.admin-track-management .track-artist-link {
+    font-size: 0.85rem;
+    color: #b3b3b3;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.admin-track-management .track-artist-link:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.admin-track-management .track-meta-details, .admin-track-management .track-actions-group {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-track-management .track-actions-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.admin-track-management .status-badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.admin-track-management .status-vip, .admin-track-management .status-pending {
+    background-color: #ffc107; color: black;
+}
+
+.status-wait {
+    background-color: #dc3545; color: black;
+}
+.admin-track-management .status-public {
+    background-color: #17a2b8; color: white;
+}
+.admin-track-management .status-approved {
+    background-color: #28a745; color: white;
+}
+
+.admin-track-management .action-btn-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+.admin-track-management .action-btn-text:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.admin-track-management .action-btn-icon {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    transition: color 0.2s;
+}
+.admin-track-management .action-btn-icon:hover {
+    color: #fff;
+}
+
+/* Modal */
+.admin-track-management .admin-modal .modal-content {
+    background-color: #282828;
+}
+.admin-track-management .admin-modal .modal-header, .admin-track-management .admin-modal .modal-footer {
+    border-color: #404040;
+}
+.admin-track-management .admin-modal .btn-close {
+    filter: invert(1);
+}
+
+/* Empty State */
+.admin-track-management .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    color: #b3b3b3;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .admin-track-management .admin-track-list-header {
+        grid-template-columns: 80px 3fr 1.5fr 1fr 2fr;
+        /* Hide date */
+        .col-date { display: none; }
+    }
+    .admin-track-management .admin-track-item {
+        grid-template-columns: 80px 3fr 1.5fr 1fr 2fr;
+        .col-date { display: none; }
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-track-management { padding: 1.5rem; }
+    .admin-track-management .admin-track-list-header { display: none; }
+    .admin-track-management .admin-track-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.04);
+        margin-bottom: 1rem;
+    }
+    .admin-track-management .admin-track-item > * {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    .admin-track-management .track-cover-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1rem auto;
+    }
+    .admin-track-management .track-info-main { text-align: center; }
+    .admin-track-management .track-meta-details { justify-content: center; }
+    .admin-track-management .track-actions-group { justify-content: center; }
+}
+
+@media (max-width: 576px) {
+    .admin-track-management { padding: 1rem; }
+    .admin-track-management .admin-filters { flex-direction: column; }
+    .admin-track-management .track-actions-group { flex-wrap: wrap; }
+}
+

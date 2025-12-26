@@ -1,0 +1,176 @@
+/* General Page Setup */
+.discover-page {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.discover-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Discover Section */
+.discover-section {
+    margin-bottom: 3rem;
+}
+
+.discover-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid for Cards */
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Music Card */
+.discover-music-card {
+    background-color: #181818;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.discover-music-card:hover {
+    background-color: #282828;
+    transform: translateY(-5px);
+}
+
+.discover-card-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.discover-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vip-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.discover-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.discover-music-card:hover .discover-card-overlay {
+    opacity: 1;
+}
+
+.discover-card-overlay .play-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.discover-card-overlay .play-button:hover {
+    transform: scale(1.15);
+    color: #1DB954;
+}
+
+.discover-card-info {
+    padding: 1rem;
+}
+
+.discover-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+}
+
+.discover-card-artist {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin: 0.25rem 0 0 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .discover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .discover-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .discover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+     .discover-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .discover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+     .discover-card-info {
+        padding: 0.75rem;
+    }
+    .discover-card-title {
+        font-size: 1rem;
+    }
+    .discover-card-artist {
+        font-size: 0.8rem;
+    }
+}
+
+.music-card-container {
+    width: 100%;
+}
+
+.music-card:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s ease-in-out;
+}

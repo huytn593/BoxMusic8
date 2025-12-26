@@ -1,0 +1,14 @@
+.custom-notify-item {
+    color: white !important;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.custom-notify-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* hoặc #444 */
+    color: white !important;
+}
+
+.custom-notify-item:hover .notify-title {
+    color: white;
+}

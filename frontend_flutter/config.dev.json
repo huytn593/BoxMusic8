@@ -1,0 +1,7 @@
+{
+  "API_HOST": "172.20.10.2",
+  "API_PORT": "5270",
+  "SWAGGER_URL": "http://172.20.10.2:5270/swagger/index.html",
+  "USE_EMULATOR": false,
+  "EMULATOR_HOST": "10.0.2.2"
+}
